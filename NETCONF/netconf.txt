@@ -1,0 +1,12 @@
+system-view immediately
+aaa
+local-user netconf password irreversible-cipher Huawei12#$
+local-user netconf service-type ssh
+local-user netconf level 3
+quit
+ssh user netconf authentication-type password
+ssh user netconf service-type snetconf
+snetconf server enable
+netconf
+protocol inbound ssh port 830
+quit

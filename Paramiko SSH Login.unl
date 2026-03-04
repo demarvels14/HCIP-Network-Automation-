@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lab name="Paramiko SSH Login" version="1" scripttimeout="300" password="" author="2" countdown="60" darkmode="1" mode3d="1" nogrid="0" joinable="2" joinable_emails="2" openable="2" openable_emails="2" editable="2" editable_emails="2" multi_config_active="">
+  <topology>
+    <nodes>
+      <node id="1" type="qemu" template="huaweine40" config="0" config_script="" script_timeout="1200" config_data="" multi_config="W10=" delay="0" icon="Router.png" image="huaweine40-ne40" left="1053" name="NE40" top="297" size="0" console="telnet" ethernet="12" nvram="0" ram="2048" serial="0" idlepc="0x0" cpu="2" cpulimit="1" uuid="58748519-dd0d-410d-8b3b-1c8180079c5a" firstmac="50:5f:f8:00:17:00" first_nic="" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -usbdevice tablet -boot order=cd" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="vmxnet3" username="" password="" eth_format="e1/0/{0}" console_2nd="" map_port="" map_port_2nd=""/>
+      <node id="2" type="qemu" template="huaweiusg6kv" config="0" config_script="" script_timeout="1200" config_data="" multi_config="W10=" delay="0" icon="Firewall.png" image="huaweiusg6kv-usg" left="318" name="HUSG6000v" top="303" size="0" console="vnc" ethernet="6" nvram="1024" ram="4096" serial="0" idlepc="0x0" cpu="2" cpulimit="1" uuid="6ea51fb9-a7d3-4b51-966c-77961213258d" firstmac="50:dd:18:00:19:00" first_nic="" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd" qemu_version="4.1.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" username="" password="" eth_format="" console_2nd="" map_port="" map_port_2nd="">
+        <interface id="0" name="G0/0/0 / MGMT" type="ethernet" network_id="2" style="" linkstyle="" color="" label="" linkcfg="" labelpos="" srcpos="" dstpos="" width="" fontsize=""/>
+      </node>
+      <node id="6" type="iol" template="iol" config="0" config_script="embedded" script_timeout="" config_data="" multi_config="W10=" delay="0" icon="Router.png" image="i86bi_Linux-L3-AdvEnterpriseK9-M2_157_3_May_2018.bin" left="594" name="R6" top="630" size="0" console="" ethernet="1" nvram="1024" ram="1024" serial="0" idlepc="0x0" cpu="0" cpulimit="1" iol_options="" keepalive="1">
+        <interface id="0" name="e0/0" type="ethernet" network_id="2" style="" linkstyle="" color="" label="" linkcfg="" labelpos="" srcpos="" dstpos="" width="" fontsize=""/>
+      </node>
+      <node id="3" type="qemu" template="huaweice12800" config="0" config_script="" script_timeout="1200" config_data="" multi_config="W10=" delay="0" icon="ce.png" image="huaweice12800-v1" left="351" name="CE12800-CE" top="489" size="0" console="telnet" ethernet="12" nvram="1024" ram="2048" serial="0" idlepc="0x0" cpu="2" cpulimit="1" uuid="7cbfe6a4-b0ea-4a87-9878-11227a80d04c" firstmac="50:c0:ef:00:1a:00" first_nic="" qemu_options="-machine type=q35,accel=kvm -serial mon:stdio -nographic -nodefaults -rtc base=utc -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" username="" password="" eth_format="GE1/0/{0}" console_2nd="" map_port="" map_port_2nd="">
+        <interface id="2" name="GE1/0/0" type="ethernet" network_id="2" style="" linkstyle="" color="" label="" linkcfg="" labelpos="" srcpos="" dstpos="" width="" fontsize=""/>
+      </node>
+    </nodes>
+    <networks>
+      <network id="1" type="pnet0" name="INTERNET" left="708" top="66" visibility="1" icon="Cloud1-1.png" size=""/>
+      <network id="2" type="pnet0" name="Aaron's-PC" left="729" top="306" visibility="1" icon="Secure Endpoints (PC).png" size=""/>
+    </networks>
+  </topology>
+  <objects>
+    <textobjects>
+      <textobject id="2" name="txt 2" type="text">
+        <data>JTNDZGl2JTIwaWQlM0QlMjJjdXN0b21UZXh0MiUyMiUyMGNsYXNzJTNEJTIyY3VzdG9tU2hhcGUlMjBjdXN0b21UZXh0JTIwY29udGV4dC1tZW51JTIwY2stY29udGVudCUyMGp0ay1kcmFnZ2FibGUlMjB1aS1zZWxlY3RlZSUyMGRyYWdzdG9wcGVkJTIyJTIwZGF0YS1wYXRoJTNEJTIyMiUyMiUyMHN0eWxlJTNEJTIycG9zaXRpb24lM0ElMjBhYnNvbHV0ZSUzQiUyMGRpc3BsYXklM0ElMjBibG9jayUzQiUyMHRvcCUzQSUyMDI1NXB4JTNCJTIwbGVmdCUzQSUyMDExMjhweCUzQiUyMHdpZHRoJTNBJTIwMTVweCUzQiUyMGhlaWdodCUzQSUyMDEwcHglM0IlMjBjdXJzb3IlM0ElMjBtb3ZlJTNCJTIyJTNFJTNDJTJGZGl2JTNF</data>
+      </textobject>
+      <textobject id="3" name="txt 3" type="text">
+        <data>JTNDZGl2JTIwaWQlM0QlMjJjdXN0b21UZXh0MyUyMiUyMGNsYXNzJTNEJTIyY3VzdG9tU2hhcGUlMjBjdXN0b21UZXh0JTIwY29udGV4dC1tZW51JTIwY2stY29udGVudCUyMGp0ay1kcmFnZ2FibGUlMjB1aS1zZWxlY3RlZSUyMGRyYWdzdG9wcGVkJTIyJTIwZGF0YS1wYXRoJTNEJTIyMyUyMiUyMHN0eWxlJTNEJTIycG9zaXRpb24lM0ElMjBhYnNvbHV0ZSUzQiUyMGRpc3BsYXklM0ElMjBibG9jayUzQiUyMHRvcCUzQSUyMDM1MXB4JTNCJTIwbGVmdCUzQSUyMDExOTFweCUzQiUyMHdpZHRoJTNBJTIwMTVweCUzQiUyMGhlaWdodCUzQSUyMDEwcHglM0IlMjBjdXJzb3IlM0ElMjBtb3ZlJTNCJTIyJTNFJTNDJTJGZGl2JTNF</data>
+      </textobject>
+    </textobjects>
+  </objects>
+</lab>
